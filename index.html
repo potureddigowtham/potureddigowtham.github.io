@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ChatBOT</title>
-    <style>
-      .content { 
-        height: 900px;
-     }
-	 
-      .content div { 
-        position: absolute;  
-      }
-      .blue { 
-        right: 40px;
-        bottom: 0;
-      }
-	  h2.a {
+<head>
+<title>ChatBOT Marvin</title>
+<style>
+.collapsible {
+  position: absolute;
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  width: 10%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 16px;
+  right: 4px;
+  bottom: 4px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+position: absolute;
+  padding: 0 0px;
+  display: none;
+  overflow: hidden;
+  right: 60px;
+  bottom : 0;
+}
+h2.a {
 		position: absolute;
 		top: 250px;
 		left : 45%;
@@ -35,17 +51,35 @@ h2.c {
 		color:white;
 		font-family:courier;
 }
-    </style>
-  </head>
-  <body background="https://github.com/potureddigowtham/potureddigowtham.github.io/blob/master/_downloadfiles_wallpapers_1680_1050_forest_trees_wallpaper_landscape_nature_1218.jpg?raw=true">
+</style>
+</head>
+<body background="https://github.com/potureddigowtham/potureddigowtham.github.io/blob/master/_downloadfiles_wallpapers_1680_1050_forest_trees_wallpaper_landscape_nature_1218.jpg?raw=true">
 	<h2 class="a"> ZeroWaste-IIK</h2>
 	<h2 class="c"> ------------- </h2>
 	<h2 class="b"> COMING SOON</h2>
- 
-    <div class="content">
-      <div class="blue">
-<iframe width="390" height="480" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/a74243b0e91041979980fda787e87325"></iframe>
+
+
+<button class="collapsible">Marvin&nbsp;&nbsp;&nbsp;     Help</button>
+<div class="content">
+  <iframe width="410" height="480" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/a74243b0e91041979980fda787e87325"></iframe>
 </div>
-    </div>
-  </body>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
 </html>
