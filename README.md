@@ -1,2 +1,2 @@
 Do Visit for info :
-https://potureddigowtham.github.io
+https://potureddigowtham.github.io/bot.html
